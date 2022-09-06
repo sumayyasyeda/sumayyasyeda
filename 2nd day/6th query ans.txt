@@ -1,0 +1,19 @@
+﻿Year        Subject                                            Winner                                             Country                                            Category
+----------- -------------------------------------------------- -------------------------------------------------- -------------------------------------------------- --------------------------------------------------
+1994        Literature                                         Kenabura oe                                        japan                                              Linguist
+1994        Economics                                          Reinhard Selten                                    Germany                                            Economist
+1987        Chemistry                                          Donald j.cram                                      USA                                                Scientist
+1987        chemistry                                          jean-marine lehn                                   france                                             Scientist
+1987        Literature                                         Joseph Brodsky                                     Russia                                             Linguist
+1987        Economics                                          Robert Solow                                       USA                                                economist
+1971        Chemistry                                          Gerhard Herzberg                                   Germany                                            Scientist
+1971        Literature                                         Pabola Neruda                                      Chile                                              Linguist
+1971        Economics                                          simon kuznets                                      Russia                                             Economist
+1970        Literature                                         Aleksandr Solzhenitsyn                             Russia                                             Linguist
+1970        Chemistry                                          Luis Federico Leloir                               France                                             Scientist
+1970        Economics                                          Paul Samuelson                                     USA                                                Economist
+
+(12 rows affected)
+
+
+Completion time: 2022-09-06T19:06:28.3617634+05:30

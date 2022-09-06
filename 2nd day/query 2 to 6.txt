@@ -1,0 +1,59 @@
+Create Table Nobelprizes1
+ (Year INT Not Null,
+  Subject VARCHAR(50) NOT NULL,
+  Winner VARCHAR(50) NOT NULL,
+  Country VARCHAR(50) NOT NULL,
+  Category VARCHAR(50) NOT NULL
+    )
+
+Insert Into Nobelprizes1
+  (Year,Subject,Winner,Country,Category)
+Values
+   (1970,'Physics','Hannes Alfven','Sweden','Scientist'),
+   (1970,'Physics','Louis Neel','France','Scientist'),
+   (1970,'Chemistry','Luis Federico Leloir','France','Scientist'),
+   (1970,'Physiology','ulf von Euler','Sweden','Scientist'),
+   (1970,'Physiology','Bernard Katz','Germany','Scientist'),
+   (1970,'Literature','Aleksandr Solzhenitsyn','Russia','Linguist'),
+   (1970,'Economics','Paul Samuelson','USA','Economist'),
+   (1970,'physiology','Julius Axelord','USA','Scientist'),
+   (1971,'Physics','Dennis Gabor','Hungary','Scientist'),
+   (1971,'Chemistry','Gerhard Herzberg','Germany','Scientist'),
+   (1971,'Literature','Pabola Neruda','Chile','Linguist'),
+   (1971,'Peace','willy brandt','germany','chancellor'),
+   (1971,'Economics','simon kuznets','Russia','Economist'),
+   (1978,'Peace','Anwar al-sadat','Egypt','President'),
+   (1978,'peace','Menachem Begim','Israel','Prime Minister'),
+   (1987,'Chemistry','Donald j.cram','USA','Scientist'),
+    (1987,'chemistry','jean-marine lehn','france','Scientist'),
+	(1987,'physiology','susuma Tonegawa','japan','Scientist'),
+	(1994,'Economics','Reinhard Selten','Germany','Economist'),
+	(1994,'Peace','yitzhak rabin','israel','prime minister'),
+	(1987,'Physics','Johannes Georg Bednorz','Germany','Scientist'),
+	(1987,'Literature','Joseph Brodsky','Russia','Linguist'),
+	(1987,'Economics','Robert Solow','USA','economist'),
+	(1994,'Literature','Kenabura oe','japan','Linguist')
+
+Select Winner
+From Nobelprizes1
+Where year=1970 and Subject='Literature'
+
+select Year,Subject,Winner
+From Nobelprizes1
+Where Year=1971
+
+Select Year,Subject
+From Nobelprizes1
+Where Winner='Dennis Gabor'
+
+Select Winner 
+From Nobelprizes1
+Where Year>=1950 and Subject ='Physics'
+
+Select *
+From Nobelprizes1
+Where Subject NOT LIKE 'p%'
+ORDER BY Year DESC ,Winner;
+
+
+

@@ -1,0 +1,11 @@
+﻿EMP_IDNO    EMP_FNAME                                          EMP_LNAME                                          EMP_DEPT
+----------- -------------------------------------------------- -------------------------------------------------- -----------
+127323      Michale                                            Robbin                                             57
+843795      Enric                                              dosia                                              57
+847674      kuleswar                                           Sitaraman                                          57
+555935      Alex                                               Manuel                                             57
+
+(4 rows affected)
+
+
+Completion time: 2022-09-06T18:15:09.2874452+05:30
