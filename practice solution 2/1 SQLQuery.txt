@@ -1,0 +1,108 @@
+Create Table Salesm
+ (salesman_id INT Not Null,
+  name varchar(50) ,
+  city VARCHAR(50) ,
+  commission float NOT NULL
+    )
+Insert Into Salesm
+  (salesman_id,name,city,commission)
+Values
+  (5001,'james hoog' ,'new york',0.15),
+  (5002,'nail knite','paris',0.13),
+  (5005,'pit alex','london',0.11),
+  (5006,'mc lyon','paris',0.14),
+  (5003,'lauson hen','NULL',0.12),
+  (5007,'paul adam','rome',0.13)
+
+
+Create Table Order3
+ (ord_no INT Not Null,
+  purch_amt float ,
+  ord_date varchar(50),
+  customer_id INT NOT NULL,
+  salesman_id INT NOT NULL
+    )
+
+
+Insert Into Order3
+  (ord_no,purch_amt,ord_date,customer_id,salesman_id)
+Values
+  (70001,150.5,'2012-10-05',3005,5002),
+  (70009,270.65,'2012-09-10',3001,5005),
+  (70002,65.26,'2012-10-05',3002,5001),
+  (70004,110.5,'2012-08-17',3009,5003),
+  (70007,948.5,'2012-09-10',3005,5002),
+  (70005,2400.6,'2012-07-27',3007,5001),
+  (70008,5760,'2012-09-10',3002,5001),
+  (70010,1983.43,'2012-10-10',3004,5006),
+  (70003,2480.4,'2012-10-10',3009,5003),
+  (70012,250.45,'2012-06-27',3008,5002),
+  (70011,75.29,'2012-08-17',3003,5007),
+  (70013,3045.6,'2012-04-25',3002,5001)
+
+  Create Table customer3
+ (customer_id INT ,
+  cust_name varchar(50) ,
+  city VARCHAR(50) ,
+  grade INT ,
+  salesman_id INT NOT NULL
+    )
+
+Insert Into customer3
+  (customer_id,cust_name,city,grade,salesman_id)
+Values
+  (3002,'nick rimando','new york',100,5001),
+  (3005,'graham zusi','california',200,5002),
+  (3001,'brad guzan','london' ,0,5005),
+  (3004,'fabian johns' ,'paris',300,5006),
+  (3007,'brad davis','new york',200,5001),
+  (3009,'geoff camero','berlin',100,5003),
+  (3008,'julian green', 'london',300,5007),
+  (3003,'jozy altidor', 'moscow',200,5007)
+
+ ******2nd query***********
+  SELECT name,city
+  FROM Salesm 
+  WHERE city='paris'
+
+ *******3rd query************
+  SELECT a.*,b.cust_name
+  FROM Order3 a,customer3 b
+  WHERE b.customer_id=a.customer_id AND a.ord_date='2012-08-17';
+
+  *********4th query***********
+  SELECT salesman_id,name
+  FROM salesm
+  WHERE 1<
+     (SELECT COUNT(*)
+	  FROM customer3
+	  WHERE salesman_id=salesm.salesman_id);
+
+
+ ************5th query*****************
+SELECT *
+FROM Order3 a
+WHERE purch_amt > 
+     (select AVG(purch_amt)
+      FROM Order3 b
+	  where a.customer_id=b.customer_id);
+
+	  ************6th query*****
+SELECT *
+FROM salesm
+where salesman_id IN(
+      Select DISTINCT salesman_id
+	  from customer3 a
+	  where NOT EXISTS (
+	  select * 
+	  FROm customer3 b
+	  where a.salesman_id=b.salesman_id
+	  AND a.cust_name<>b.cust_name));
+
+*******8th query*******
+SELECT *
+FROM salesm
+where city in(select city from customer3)
+
+
+	  

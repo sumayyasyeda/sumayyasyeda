@@ -1,0 +1,9 @@
+﻿salesman_id name
+----------- --------------------------------------------------
+5001        james hoog
+5007        paul adam
+
+(2 rows affected)
+
+
+Completion time: 2022-09-07T17:04:23.2698583+05:30
