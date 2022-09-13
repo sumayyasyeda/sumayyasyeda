@@ -1,0 +1,132 @@
+/**creating a table**/
+
+CREATE TABLE Product
+(ProductID INT, ProductName VARCHAR(100) )
+GO
+CREATE TABLE ProductDescription
+(ProductID INT, ProductDescription VARCHAR(800) )
+GO
+INSERT INTO Product VALUES (680,'HL Road Frame - Black, 58'),
+(706,'HL Road Frame - Red, 58'),
+(707,'Sport-100 Helmet, Red')
+GO
+INSERT INTO ProductDescription VALUES (680,'Replacement mountain wheel for entry-level rider.'),
+(706,'Sturdy alloy features a quick-release hub.'),
+(707,'Aerodynamic rims for smooth riding.')
+
+
+select * from product
+
+
+/* simple stored procedure*/
+create Procedure GetProdDescription19
+AS
+begin
+set NOCount ON
+select p.productID,p.ProductName,PD.productDescription
+from Product as p
+inner join ProductDescription PD
+on p.ProductID=PD.ProductID
+end
+
+exec GetprodDescription19
+
+
+/*with parameters*/
+create procedure GetProdDescription_withparaments16
+(@PID INT)
+AS
+BEGIN
+SET NOCOUNT on
+Select p.ProductID,p.ProductName,PD.productDescription
+from product as p
+inner join productDescription PD
+on p.productID=PD.productID
+where p.productID=@PID
+END
+
+exec GetProdDescription_withparaments16 786
+
+
+/*with default description*/
+create procedure GetprodDescription_defaultparam
+(@PID INT=706)
+AS
+BEGIN
+SET NOCount on
+Select p.ProductID,p.ProductName,PD.productDescription
+from product as p
+inner join productDescription PD
+on p.productID=PD.productID
+where p.productID=@PID
+END
+
+exec GetprodDescription_defaultparam 680
+
+
+/*creating another table */
+create table employee17(empID int Identity(1,1),empName varchar(50))
+
+select * from employee17
+
+/*with output parameters*/
+create procedure emp_newemp_withoutputparameters
+(@empname varchar(50),
+@empID int output)
+as
+begin
+set NOcount on
+insert into employee17(empname) values(@empname)
+select @EmpID=scope_identity()
+end
+
+declare @empID int
+exec emp_newemp_withoutputparameters 'andrew',
+@empID output
+select @empID as employeeid
+
+select * from employee17
+
+/**another way encryption*/
+create procedure Getemployee17
+with encryption
+as
+begin set NOCount ON
+select empID,empname
+from employee17
+end
+
+sp_helptext getemployee17
+
+/**temporary table**/
+/*local temporary*/
+create procedure #temp as
+begin
+print('local temp procedure')
+end
+
+exec #temp
+
+/**global temporary*/
+create procedure ##temp17
+as
+begin
+print('global tempprocedure')
+end
+
+exec ##temp17
+
+/*renaming stored procedure*/
+
+create procedure GetProdDescription18 as
+begin
+set NOCount on
+select p.productID,p.productName,pd.productdescription
+from product as p
+inner join productdescription pd
+on p.productID=pd.productID
+end
+
+exec sp_rename 'getProdDescription18' , 'getproduct__me'
+
+exec GetProduct__me
