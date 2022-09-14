@@ -1,0 +1,64 @@
+﻿businessEntityID jobTitle                                           vacationhours maxvacationhours individualemployee
+---------------- -------------------------------------------------- ------------- ---------------- ------------------
+1                Chief Executive Officer                            99            99               100
+88               Production Technician - WC10                       99            99               100
+117              Production Technician - WC50                       99            99               100
+116              Production Technician - WC50                       98            99               98
+124              Stocker                                            98            99               98
+92               Production Technician - WC10                       98            99               98
+90               Production Technician - WC10                       97            99               97
+122              Stocker                                            97            99               97
+114              Production Technician - WC50                       97            99               97
+113              Production Technician - WC50                       96            99               96
+126              Stocker                                            96            99               96
+89               Production Technician - WC10                       96            99               96
+91               Production Technician - WC10                       95            99               95
+123              Shipping and Receiving Clerk                       95            99               95
+109              Production Technician - WC50                       95            99               95
+119              Production Technician - WC50                       94            99               94
+125              Shipping and Receiving Clerk                       94            99               94
+104              Production Technician - WC10                       94            99               94
+103              Production Technician - WC10                       93            99               93
+121              Shipping and Receiving Supervisor                  93            99               93
+111              Production Technician - WC50                       93            99               93
+115              Production Technician - WC50                       92            99               92
+106              Production Technician - WC10                       92            99               92
+228              Maintenance Supervisor                             92            99               92
+231              Janitor                                            91            99               91
+107              Production Technician - WC10                       91            99               91
+112              Production Technician - WC50                       91            99               91
+110              Production Technician - WC50                       90            99               90
+105              Production Technician - WC10                       90            99               90
+229              Janitor                                            90            99               90
+232              Janitor                                            89            99               89
+120              Production Technician - WC50                       89            99               89
+54               Production Technician - WC10                       89            99               89
+49               Production Technician - WC10                       88            99               88
+118              Production Technician - WC50                       88            99               88
+230              Janitor                                            88            99               88
+233              Facilities Administrative Assistant                87            99               87
+209              Production Technician - WC45                       87            99               87
+53               Production Technician - WC10                       87            99               87
+52               Production Technician - WC10                       86            99               86
+208              Production Technician - WC45                       86            99               86
+227              Facilities Manager                                 86            99               86
+213              Quality Assurance Technician                       85            99               85
+207              Production Technician - WC45                       85            99               85
+51               Production Technician - WC10                       85            99               85
+50               Production Technician - WC10                       84            99               84
+206              Production Technician - WC45                       84            99               84
+214              Quality Assurance Technician                       84            99               84
+215              Quality Assurance Technician                       83            99               83
+210              Production Technician - WC45                       83            99               83
+48               Production Technician - WC10                       83            99               83
+40               Production Supervisor - WC60                       82            99               82
+190              Production Technician - WC45                       82            99               82
+216              Quality Assurance Technician                       82            99               82
+212              Quality Assurance Supervisor                       81            99               81
+189              Production Technician - WC45                       81            99               81
+62               Production Supervisor - WC60                       81            99               81
+
+(57 rows affected)
+
+
+Completion time: 2022-09-14T18:10:08.8994258+05:30
